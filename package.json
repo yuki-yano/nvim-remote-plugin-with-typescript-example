@@ -4,8 +4,8 @@
   "description": "",
   "main": "./build/index.js",
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch",
+    "build": "ncc build src/index.ts --out build",
+    "dev": "ncc build src/index.ts --watch --out build",
     "lint": "eslint src/**/*.ts",
     "test": "jest",
     "postinstall": "npm run build"
@@ -19,6 +19,7 @@
     "@types/node": "^13.13.5",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
+    "@zeit/ncc": "^0.22.2",
     "eslint": "^7.0.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-node": "^11.1.0",
