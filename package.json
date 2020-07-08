@@ -4,11 +4,11 @@
   "description": "",
   "main": "./build/index.js",
   "scripts": {
-    "build": "ncc build src/index.ts --out build",
-    "dev": "ncc build src/index.ts --watch --out build",
+    "build": "webpack",
+    "dev": "webpack --watch",
     "lint": "eslint 'src/**/*.ts'",
     "test": "jest",
-    "postinstall": "npm run build"
+    "postinstall": "yarn run build"
   },
   "author": "yuki-yano",
   "dependencies": {
@@ -19,7 +19,6 @@
     "@types/node": "^13.13.5",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
-    "@zeit/ncc": "^0.22.2",
     "eslint": "^7.0.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-node": "^11.1.0",
@@ -29,7 +28,10 @@
     "lint-staged": "^10.2.2",
     "prettier": "^2.0.5",
     "ts-jest": "^26.0.0",
-    "typescript": "^3.9.2"
+    "ts-loader": "^7.0.5",
+    "typescript": "^3.9.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
   },
   "husky": {
     "hooks": {
